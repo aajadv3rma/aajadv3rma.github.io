@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aajad Verma — Java & Android Developer</title>
+  <meta name="description" content="Portfolio of Aajad Verma — Java Developer & Android Developer building modern applications and digital experiences.">
+  <meta name="keywords" content="Aajad Verma, Java Developer, Android Developer, Portfolio, MCA, BCA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader-content">
+      <div class="loader-logo">Aajad Verma</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>AV<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#terminal" class="nav-link">Terminal</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-gradient-orb orb-1"></div>
+      <div class="hero-gradient-orb orb-2"></div>
+      <div class="hero-gradient-orb orb-3"></div>
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="badge-dot"></span> Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          <span class="reveal-up delay-1">Hi, I'm</span>
+          <span class="hero-name reveal-up delay-2">Aajad Verma</span>
+        </h1>
+        <p class="hero-role reveal-up delay-3">
+          <span class="role-text">Java</span>
+          <span class="role-ampersand">&</span>
+          <span class="role-text">Android Developer</span>
+        </p>
+        <p class="hero-desc reveal-up delay-4">Building modern applications and digital experiences with clean code and creative thinking.</p>
+        <div class="hero-buttons reveal-up delay-5">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="hero-scroll-indicator reveal-up delay-5">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;about&gt;</span>
+          <h2 class="section-title reveal-up">About <span class="gradient-text">Me</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal-left">
+            <div class="about-avatar-wrapper">
+              <div class="about-avatar">
+                <div class="avatar-placeholder">
+                  <span>AV</span>
+                </div>
+              </div>
+              <div class="avatar-ring"></div>
+              <div class="avatar-glow"></div>
+            </div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Years Learning</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
+                <span class="stat-label">Commits</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text reveal-right">
+            <h3>A passionate developer crafting digital experiences</h3>
+            <p>I'm <strong>Aajad Verma</strong>, a dedicated MCA student and software developer with a strong focus on <strong>Java</strong> and <strong>Android Development</strong>. My journey in tech began during my BCA (2022–2025), where I discovered my passion for building applications that solve real-world problems.</p>
+            <p>Currently pursuing my <strong>Master of Computer Applications (MCA)</strong>, I continue to sharpen my skills in software engineering, mobile app development, and modern development practices. I believe in writing clean, efficient code and creating seamless user experiences.</p>
+            <p>When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects on GitHub, and staying updated with the latest trends in the developer ecosystem.</p>
+            <div class="about-tags">
+              <span class="tag">Problem Solver</span>
+              <span class="tag">Clean Code Advocate</span>
+              <span class="tag">Lifelong Learner</span>
+              <span class="tag">Open Source</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;skills&gt;</span>
+          <h2 class="section-title reveal-up">My <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle reveal-up">Technologies and tools I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal-up delay-1" data-tilt>
+            <div class="skill-icon" style="--glow-color: #f89820;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.356.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0 0 .07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.889 4.832 0 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.189-7.627M9.734 23.924c4.322.277 10.959-.154 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0 0 .553.457 3.393.639"/></svg>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <p class="skill-desc">Core Java, OOP, Data Structures, Collections Framework</p>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="85">
+                <div class="progress-fill" style="--progress-color: #f89820;"></div>
+              </div>
+              <span class="progress-value">85%</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-up delay-2" data-tilt>
+            <div class="skill-icon" style="--glow-color: #3ddc84;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.0997.0997 0 0 0-.0476.028l-1.321.795a.1.1 0 0 0-.0476.0857v1.59a.1.1 0 0 0 .0476.0857l1.321.795a.0997.0997 0 0 0 .0952 0l1.321-.795a.1.1 0 0 0 .0476-.0857v-1.59a.1.1 0 0 0-.0476-.0857l-1.321-.795a.0997.0997 0 0 0-.0476-.028M6.477 15.341a.0997.0997 0 0 0-.0476.028l-1.321.795a.1.1 0 0 0-.0476.0857v1.59a.1.1 0 0 0 .0476.0857l1.321.795a.0997.0997 0 0 0 .0952 0l1.321-.795a.1.1 0 0 0 .0476-.0857v-1.59a.1.1 0 0 0-.0476-.0857l-1.321-.795a.0997.0997 0 0 0-.0476-.028M16 5l-4-2.5L8 5l4 2.5L16 5zm1 3.5L12 6 7 8.5v5L12 16l5-2.5v-5zM6.5 9v6l5.5 3.5L17.5 15V9L12 5.5 6.5 9z"/></svg>
+            </div>
+            <h3 class="skill-name">Android Dev</h3>
+            <p class="skill-desc">Android SDK, XML Layouts, Material Design, Activities</p>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="78">
+                <div class="progress-fill" style="--progress-color: #3ddc84;"></div>
+              </div>
+              <span class="progress-value">78%</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-up delay-3" data-tilt>
+            <div class="skill-icon" style="--glow-color: #f05033;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93L13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.66 2.66a1.838 1.838 0 1 1-1.103 1.033l-2.48-2.48v6.53a1.838 1.838 0 1 1-1.513-.122V8.784a1.838 1.838 0 0 1-.998-2.41L7.629 3.645.453 10.82a1.55 1.55 0 0 0 0 2.188l10.48 10.477a1.55 1.55 0 0 0 2.186 0l10.427-10.37a1.55 1.55 0 0 0 0-2.187"/></svg>
+            </div>
+            <h3 class="skill-name">Git & GitHub</h3>
+            <p class="skill-desc">Version Control, Branching, Pull Requests, Collaboration</p>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="80">
+                <div class="progress-fill" style="--progress-color: #f05033;"></div>
+              </div>
+              <span class="progress-value">80%</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal-up delay-4" data-tilt>
+            <div class="skill-icon" style="--glow-color: #61dafb;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.076-.914.203-2.282.041-.474H6.375l.016.166.672 7.563h7.894l-.336 3.686-2.618.716-2.604-.703-.168-1.873H7.26l.327 3.655L12.007 18l4.399-1.226.594-6.68H8.865l-.334-3.344z"/></svg>
+            </div>
+            <h3 class="skill-name">Web Technologies</h3>
+            <p class="skill-desc">HTML, CSS, JavaScript, Responsive Design</p>
+            <div class="skill-progress">
+              <div class="progress-bar" data-progress="72">
+                <div class="progress-fill" style="--progress-color: #61dafb;"></div>
+              </div>
+              <span class="progress-value">72%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;projects&gt;</span>
+          <h2 class="section-title reveal-up">GitHub <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle reveal-up">Auto-fetched from my GitHub repositories</p>
+        </div>
+        <div id="projects-grid" class="projects-grid">
+          <div class="projects-loader">
+            <div class="loader-spinner"></div>
+            <p>Fetching repositories...</p>
+          </div>
+        </div>
+        <div class="projects-cta reveal-up">
+          <a href="https://github.com/aajadv3rma" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>View All on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;terminal&gt;</span>
+          <h2 class="section-title reveal-up">Developer <span class="gradient-text">Terminal</span></h2>
+          <p class="section-subtitle reveal-up">Get to know me through the command line</p>
+        </div>
+        <div class="terminal-wrapper reveal-up">
+          <div class="terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">aajad@portfolio: ~</div>
+              <div class="terminal-actions"></div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div class="terminal-welcome">Welcome to Aajad's Terminal v2.0 — Type 'help' for commands</div>
+            </div>
+            <div class="terminal-input-line">
+              <span class="terminal-prompt">visitor@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;education&gt;</span>
+          <h2 class="section-title reveal-up">Education <span class="gradient-text">Timeline</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <div class="timeline-item reveal-left">
+            <div class="timeline-dot">
+              <div class="timeline-dot-inner"></div>
+            </div>
+            <div class="timeline-card" data-tilt>
+              <div class="timeline-date">July 2022 — June 2025</div>
+              <h3 class="timeline-title">Bachelor of Computer Applications</h3>
+              <p class="timeline-subtitle">BCA — Undergraduate Degree</p>
+              <p class="timeline-desc">Built a strong foundation in computer science, programming, databases, and software development. Gained hands-on experience with Java, data structures, and web technologies.</p>
+              <div class="timeline-tags">
+                <span>Computer Science</span>
+                <span>Java</span>
+                <span>DBMS</span>
+                <span>Web Dev</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item right reveal-right">
+            <div class="timeline-dot">
+              <div class="timeline-dot-inner active"></div>
+            </div>
+            <div class="timeline-card" data-tilt>
+              <div class="timeline-date">
+                <span class="date-current">January 2026 — Present</span>
+                <span class="badge-current">Currently Pursuing</span>
+              </div>
+              <h3 class="timeline-title">Master of Computer Applications</h3>
+              <p class="timeline-subtitle">MCA — Postgraduate Degree</p>
+              <p class="timeline-desc">Advancing skills in advanced software engineering, Android app development, and modern computing paradigms. Focused on building production-ready applications.</p>
+              <div class="timeline-tags">
+                <span>Advanced Java</span>
+                <span>Android</span>
+                <span>Software Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Stats -->
+    <section id="stats" class="section section-compact">
+      <div class="container">
+        <div class="stats-grid reveal-up">
+          <div class="stats-card">
+            <div class="stats-icon">☕</div>
+            <span class="stats-number" data-count="1200">0</span><span class="stats-plus">+</span>
+            <span class="stats-label">Cups of Coffee</span>
+          </div>
+          <div class="stats-card">
+            <div class="stats-icon">💻</div>
+            <span class="stats-number" data-count="15">0</span><span class="stats-plus">+</span>
+            <span class="stats-label">Projects Built</span>
+          </div>
+          <div class="stats-card">
+            <div class="stats-icon">📝</div>
+            <span class="stats-number" data-count="10000">0</span><span class="stats-plus">+</span>
+            <span class="stats-label">Lines of Code</span>
+          </div>
+          <div class="stats-card">
+            <div class="stats-icon">🎓</div>
+            <span class="stats-number" data-count="3">0</span><span class="stats-plus">+</span>
+            <span class="stats-label">Years of Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Contribution Graph -->
+    <section class="section section-compact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title reveal-up" style="font-size: 1.5rem;">Contribution <span class="gradient-text">Activity</span></h2>
+        </div>
+        <div class="contrib-graph reveal-up" id="contrib-graph"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-up">&lt;contact&gt;</span>
+          <h2 class="section-title reveal-up">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle reveal-up">Have a project in mind or just want to say hi? Let's connect!</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <div class="contact-card">
+              <h3>Let's work together</h3>
+              <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+              <div class="contact-links">
+                <a href="mailto:ajadverma666@gmail.com" class="contact-link-item">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">Primary Email</span>
+                    <span class="contact-link-value">ajadverma666@gmail.com</span>
+                  </div>
+                </a>
+                <a href="mailto:aajadverma555@gmail.com" class="contact-link-item">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">Secondary Email</span>
+                    <span class="contact-link-value">aajadverma555@gmail.com</span>
+                  </div>
+                </a>
+                <a href="https://github.com/aajadv3rma" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">GitHub</span>
+                    <span class="contact-link-value">github.com/aajadv3rma</span>
+                  </div>
+                </a>
+                <a href="https://linkedin.com/in/aajadv3rma" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                  <div class="contact-link-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-link-label">LinkedIn</span>
+                    <span class="contact-link-value">linkedin.com/in/aajadv3rma</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper reveal-right">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <div class="input-glow"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                <div class="input-glow"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                <div class="input-glow"></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </button>
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>AV<span class="logo-bracket">/&gt;</span>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/aajadv3rma" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/aajadv3rma" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:ajadverma666@gmail.com">Email</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Aajad Verma — All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
