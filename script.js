@@ -195,7 +195,7 @@ function initParticles() {
       const dx = this.x - mouseX;
       const dy = this.y - mouseY;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
+      if (dist > 0 && dist < 120) {
         const force = (120 - dist) / 120;
         this.vx += (dx / dist) * force * 0.02;
         this.vy += (dy / dist) * force * 0.02;
@@ -608,24 +608,19 @@ function initContribGraph() {
   const graph = document.getElementById('contrib-graph');
   if (!graph) return;
 
-  const totalCells = 364; // 52 weeks * 7 days
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < totalCells; i++) {
-    const cell = document.createElement('div');
-    cell.className = 'contrib-cell';
-
-    // Random contribution level
-    const rand = Math.random();
-    if (rand > 0.7) cell.classList.add('level-1');
-    if (rand > 0.82) cell.classList.add('level-2');
-    if (rand > 0.9) cell.classList.add('level-3');
-    if (rand > 0.96) cell.classList.add('level-4');
-
-    fragment.appendChild(cell);
-  }
-
-  graph.appendChild(fragment);
+  // Link to GitHub's real contribution calendar instead of generating
+  // random cells that could misrepresent contribution activity.
+  graph.innerHTML = `
+    <div style="text-align: center; width: 100%;">
+      <a href="https://github.com/aajadv3rma" target="_blank" rel="noopener noreferrer"
+         style="color: var(--accent-1); font-weight: 600; text-decoration: none;">
+        View live contribution activity on GitHub ↗
+      </a>
+      <p style="margin: 8px 0 0; color: var(--text-muted); font-size: 0.85rem;">
+        GitHub's profile is the source of truth for contribution counts and dates.
+      </p>
+    </div>
+  `;
 }
 
 // ============================================
