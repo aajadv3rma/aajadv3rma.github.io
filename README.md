@@ -51,7 +51,7 @@ I am currently focused on:
 **Email:** [ajadverma666@gmail.com](mailto:ajadverma666@gmail.com)
 
 **LinkedIn:**
-https://linkedin.com/in/aajadv3
+https://linkedin.com/in/aajadv3rma
 
 **GitHub:**
 https://github.com/aajadv3rma
