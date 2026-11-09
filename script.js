@@ -93,8 +93,9 @@ function initNavigation() {
 
   // Mobile menu
   hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
   });
 
   // Smooth scroll & close mobile menu
@@ -107,6 +108,7 @@ function initNavigation() {
       }
       hamburger.classList.remove('active');
       navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 
