@@ -564,9 +564,15 @@ function initThemeToggle() {
   const toggle = document.getElementById('theme-toggle');
   const html = document.documentElement;
 
-  // Check saved theme
-  const saved = localStorage.getItem('theme');
-  if (saved) {
+  // Restore only supported themes; storage may be unavailable in private or restricted contexts.
+  let saved = null;
+  try {
+    saved = window.localStorage.getItem('theme');
+  } catch {
+    // Keep the page usable when browser storage is blocked.
+  }
+
+  if (saved === 'dark' || saved === 'light') {
     html.setAttribute('data-theme', saved);
   }
 
@@ -574,7 +580,12 @@ function initThemeToggle() {
     const current = html.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+
+    try {
+      window.localStorage.setItem('theme', next);
+    } catch {
+      // The selected theme still applies for this page when persistence is unavailable.
+    }
   });
 }
 
